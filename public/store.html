@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#592d38">
+  <meta name="description" content="Os looks da Marília Modas, em Petrolina. Explore peças vistas no nosso Instagram e consulte tamanhos e valores pelo WhatsApp.">
+  <title>Marília Modas | De Petrolina, para você</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;600&family=Italiana&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="editorial.css">
+  <script src="catalog.js" defer></script><script src="editorial.js" defer></script>
+<script src="/newsletter.js" defer></script></head>
+<body><div class="reading-progress" aria-hidden="true"></div>
+  <a class="skip" href="#pecas">Ir para as peças</a>
+  <div class="topline"><span>PETROLINA, PE</span><span>Da nossa loja para todo o Brasil</span><a href="https://www.instagram.com/mariliamodas_m/" target="_blank" rel="noopener">@mariliamodas_m ↗</a></div>
+  <header>
+    <button class="menu-toggle icon-button" data-action="menu" aria-label="Abrir navegação" aria-expanded="false"><svg viewBox="0 0 24 24"><path d="M3 8h18M3 16h18"/></svg></button>
+    <a class="wordmark" href="#inicio" aria-label="Marília Modas, início">Marília<span>MODAS</span></a>
+    <nav aria-label="Navegação"><a href="#pecas">As peças</a><a href="#bolsas">Bolsas</a><a href="#detalhes">De perto</a><a href="#loja">Nossa loja</a></nav>
+    <div class="actions">
+      <button class="icon-button" data-action="search" aria-label="Buscar peças"><svg viewBox="0 0 24 24"><circle cx="10" cy="10" r="6.5"/><path d="m15 15 6 6"/></svg></button>
+      <button class="icon-button" data-action="favorites" aria-label="Meus favoritos" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 20S2 14 2 7.5C2 2 9 1 12 6c3-5 10-4 10 1.5C22 14 12 20 12 20Z"/></svg><span id="favorite-count"></span></button>
+      <button class="bag-button" data-action="bag" aria-label="Abrir sacola"><svg viewBox="0 0 24 24"><path d="M4 7h16l1 14H3L4 7Z M8 8V5a4 4 0 0 1 8 0v3"/></svg><span class="bag-label">Sacola</span><span id="bag-count">0</span></button>
+    </div>
+  </header>
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow">MARÍLIA MODAS / SELEÇÃO FEMININA</p>
+        <p class="edition">O seu próximo capítulo</p><h1>Vista o seu<br><span>melhor</span><br>momento.</h1>
+        <div class="hero-description"><span class="tiny-line"></span><p>Roupas que acompanham você.<br>Bolsas que completam a história.</p></div>
+        <a class="button cream" href="#pecas">Escolha o seu <span>↗</span></a>
+        <div class="hero-switch" role="group" aria-label="Destaques"><button data-hero="taupe" aria-pressed="true">01 <span>O caimento</span></button><button data-hero="vinho" aria-pressed="false">02 <span>A cor</span></button><button data-hero="bolsa-classica" aria-pressed="false">03 <span>O detalhe</span></button></div>
+      </div>
+      <div class="hero-photo">
+        <img src="assets/vestido-taupe.webp" alt="Recriação com IA do vestido taupe drapeado visto no Instagram da Marília Modas" fetchpriority="high">
+        <div class="photo-caption"><span>01 — OMBRO A OMBRO</span><button data-product="taupe">Ver a peça ↗</button></div>
+        <span class="photo-disclosure">Imagem recriada com IA a partir do perfil</span>
+      </div>
+      <a class="hero-stamp" href="#bolsas"><span>Complete<br>o look</span><b>↗</b></a><div class="side-note">MARÍLIA MODAS · PETROLINA, PE</div>
+    </section>
+    <section id="pecas" class="catalog section">
+      <div class="section-heading"><div><p class="eyebrow">ESCOLHA, SALVE, EXPERIMENTE</p><h2>Encontre a sua<br><em>próxima favorita.</em></h2></div><p>Gostou de uma peça? A Marília te conta<br>as cores, medidas e valores disponíveis.</p></div>
+      <div class="catalog-toolbar"><div class="categories" role="group" aria-label="Categoria"><button data-category="Todas" class="selected" aria-pressed="true">Tudo <sup>11</sup></button><button data-category="Vestidos" aria-pressed="false">Vestidos <sup>4</sup></button><button data-category="Conjuntos" aria-pressed="false">Conjuntos <sup>2</sup></button><button data-category="Bolsas" aria-pressed="false">Bolsas <sup>5</sup></button></div><button class="filter-toggle" data-action="filters" aria-expanded="false" aria-controls="filters">Filtros <span id="filter-count"></span> ☷</button></div>
+      <div class="catalog-controls"><div id="search-panel" class="search-panel"><label class="sr-only" for="search">Buscar no catálogo</label><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Busque por peça, cor ou detalhe…"></div><label class="sort-label"><span>Ordenar</span><select id="filter-sort"><option value="editorial">Seleção Marília</option><option value="az">Nome: A a Z</option><option value="za">Nome: Z a A</option></select></label></div>
+      <div class="filters" id="filters" hidden><fieldset><legend>Cores · selecione uma ou mais</legend><div id="color-options" class="color-options"></div></fieldset><label>Detalhes<select id="filter-detail"><option value="">Todos os detalhes</option><option>Drapeado</option><option>Amarração</option><option>Corrente</option><option>Metalizado</option><option>Matelassê</option></select></label><label class="check-label"><input type="checkbox" id="filter-favorites"> Apenas favoritos</label><button class="text-button" data-action="clear">Limpar tudo</button><p>Valores, medidas e disponibilidade são confirmados com a loja.</p></div>
+      <div class="catalog-status"><p class="result-count" id="result-count" aria-live="polite"></p><div class="view-options" role="group" aria-label="Visualização"><button data-view="editorial" aria-label="Grade editorial" aria-pressed="true">▦</button><button data-view="compact" aria-label="Grade compacta" aria-pressed="false">▥</button></div></div><div id="active-filters" class="active-filters" aria-label="Filtros aplicados"></div>
+      <div class="products" id="products"></div>
+      <div class="catalog-note"><span>Escolher também pode ser uma conversa.</span><a href="https://wa.me/5587988630420?text=Ol%C3%A1%2C%20Mar%C3%ADlia!%20Quero%20ver%20mais%20looks%20dispon%C3%ADveis." target="_blank" rel="noopener">Me mostre mais looks ↗</a></div>
+    </section>
+    <section id="bolsas" class="bags-story reveal"><div class="bags-copy"><p class="eyebrow">BOLSAS / O ÚLTIMO TOQUE</p><h2>Pequenos<br>detalhes.<br><em>Presença inteira.</em></h2><p>Do metalizado à corrente dourada. Encontre a bolsa que faz sentido com o seu jeito de vestir.</p><button class="button dark" data-browse="Bolsas">Explore as bolsas <span>↗</span></button><span class="handwritten">a escolha é sua.</span></div><div class="bags-composition"><button data-product="bolsa-classica" class="bag-feature"><img src="assets/bolsa-studio-XGdVPFYy.webp" alt="Recriação da bolsa preta com corrente" loading="lazy"><span>01 / A clássica ↗</span></button><button data-product="bolsa-metal" class="bag-inset"><img src="assets/bolsa-studio-S2CyP8xM.webp" alt="Recriação da bolsa metalizada de mão" loading="lazy"><span>02 / O brilho ↗</span></button><p>RECRIADAS A PARTIR DAS FOTOS DA LOJA</p></div></section>
+    <section class="details" id="detalhes">
+      <div class="detail-photo"><img src="assets/vestido-vinho.webp" alt="Detalhe da recriação do vestido vinho: decote redondo e drapeado na saia" loading="lazy"><span>02 / VINHO</span></div>
+      <div class="detail-copy"><p class="eyebrow">MENOS DÚVIDA NA HORA DE ESCOLHER</p><h2>É o caimento<br>que faz<br>a diferença.</h2><p>Quer ver como a peça fica no corpo? Abra o vídeo original da loja. E, antes de fechar, peça as medidas à Marília.</p><a class="text-link" href="https://www.instagram.com/mariliamodas_m/reel/DbuH2TiMDlp/" target="_blank" rel="noopener">Veja o vestido no perfil ↗</a><div class="detail-foot"><span>UM LOOK. DO SEU JEITO.</span><button data-product="vinho" aria-label="Ver vestido vinho">↗</button></div></div>
+    </section>
+    <section class="service section"><div class="service-intro"><p class="eyebrow">PODE CHAMAR A GENTE</p><h2>Uma conversa<br>resolve.</h2></div><div class="service-step"><span>01</span><h3>Escolha suas peças</h3><p>Salve os favoritos ou monte sua sacola. Sem pressa.</p></div><div class="service-step"><span>02</span><h3>Tire suas dúvidas</h3><p>A gente confirma tamanho, cor, valor e disponibilidade pelo WhatsApp.</p></div><div class="service-step"><span>03</span><h3>Combine a entrega</h3><p>Consulte o frete para seu CEP ou passe na nossa loja em Petrolina.</p></div></section>
+    <section class="store" id="loja"><div class="store-main"><p class="eyebrow">TEM ENDEREÇO. TEM GENTE. TEM MARÍLIA.</p><h2>De Petrolina,<br>para o seu<br><span>guarda-roupa.</span></h2><a class="button dark" href="https://wa.me/5587988630420" target="_blank" rel="noopener">Converse com a Marília <span>↗</span></a></div><div class="store-info"><p class="eyebrow">VISITE A LOJA</p><h3>Avenida Maria<br>Coelho de Amorim</h3><p>Bairro José e Maria · Petrolina, PE</p><a class="text-link" href="https://www.google.com/maps/search/?api=1&query=Avenida+Maria+Coelho+de+Amorim+Jose+e+Maria+Petrolina" target="_blank" rel="noopener">Ver endereço no mapa ↗</a><div class="store-contact"><a href="https://wa.me/5587988630420" target="_blank" rel="noopener">(87) 98863-0420</a><p>Consulte o horário antes da visita.</p></div><a class="instagram-link" href="https://www.instagram.com/mariliamodas_m/" target="_blank" rel="noopener">Os próximos looks estão no Instagram.<br><strong>@mariliamodas_m ↗</strong></a></div></section>
+  </main>
+  <section class="newsletter section"><div><p class="eyebrow">CARTA DA MARÍLIA</p><h2>As novidades.<br><em>Primeiro, para você.</em></h2><p>Receba um e-mail quando a nossa seleção ganhar novas peças.</p></div><form id="newsletter-form"><label for="newsletter-email">Seu melhor e-mail</label><div class="newsletter-input"><input id="newsletter-email" name="email" type="email" autocomplete="email" maxlength="254" placeholder="voce@exemplo.com" required><button type="submit" aria-label="Inscrever-se na newsletter">↗</button></div><label class="newsletter-consent"><input type="checkbox" name="consent" required> Quero receber novidades da Marília Modas por e-mail. Posso cancelar a qualquer momento.</label><p class="newsletter-privacy">Seu e-mail será usado apenas para estas novidades. <a href="/privacidade.html">Saiba mais</a>.</p><div class="sr-only" aria-hidden="true"><input name="website" tabindex="-1" autocomplete="off"></div><p id="newsletter-status" role="status"></p></form></section>
+  <footer><div class="footer-top"><a class="wordmark" href="#inicio">Marília<span>MODAS</span></a><div><a href="#pecas">As peças</a><a href="#loja">Atendimento</a><button data-action="policy">Trocas e devoluções</button></div><p>Pix e cartão de crédito<br><span>Condições sob consulta.</span></p></div><div class="footer-bottom"><span>© <span id="year"></span> Marília Modas</span><p>Roupas: imagens recriadas com IA a partir do perfil, identificadas em cada peça. Bolsas: imagens recriadas a partir das fotos fornecidas pela loja. Consulte valores, medidas e disponibilidade antes de comprar.</p><span>PETROLINA · PERNAMBUCO</span></div></footer>
+  <a class="floating-contact" href="https://wa.me/5587988630420" target="_blank" rel="noopener" aria-label="Atendimento pelo WhatsApp"><svg viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-12 7L3 20l1.5-5A8 8 0 1 1 20 11.5Z"/><path d="M8 7c0 5 4 8 8 8l1-2-3-1-1 1-3-3 1-1-1-2Z"/></svg><span>Fale com a Marília</span></a>
+  <div id="toast" class="toast" role="status"></div>
+  <dialog id="product-dialog"></dialog><dialog id="bag-dialog"></dialog><dialog id="info-dialog"></dialog>
+</body>
+</html>
+
+

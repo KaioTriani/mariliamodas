@@ -1,0 +1,25 @@
+CREATE TABLE IF NOT EXISTS subscribers (
+ email VARCHAR(254) PRIMARY KEY, token CHAR(72) NOT NULL, status VARCHAR(20) NOT NULL,
+ consent_at VARCHAR(32) NOT NULL, version CHAR(64) NOT NULL,
+ INDEX subscriber_token (token), INDEX subscriber_status (status)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+CREATE TABLE IF NOT EXISTS quotes (
+ id CHAR(36) PRIMARY KEY, postal_code CHAR(8) NOT NULL, items LONGTEXT NOT NULL,
+ options LONGTEXT NOT NULL, expires BIGINT NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE IF NOT EXISTS orders (
+ id CHAR(36) PRIMARY KEY, quote_id CHAR(36) NOT NULL, token CHAR(72) NOT NULL,
+ total_cents INT NOT NULL, status VARCHAR(20) NOT NULL,
+ preference_id VARCHAR(128), checkout_url TEXT
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE IF NOT EXISTS rate_limits (
+ id CHAR(64) PRIMARY KEY, bucket BIGINT NOT NULL, count INT NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE IF NOT EXISTS sync_lock (
+ id VARCHAR(32) PRIMARY KEY, owner CHAR(36) NOT NULL, expires BIGINT NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE IF NOT EXISTS deliveries (
+ id CHAR(64) PRIMARY KEY, email VARCHAR(254) NOT NULL, version CHAR(64) NOT NULL,
+ status VARCHAR(20) NOT NULL, created_at BIGINT NOT NULL,
+ INDEX delivery_subscriber_version(email, version)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;

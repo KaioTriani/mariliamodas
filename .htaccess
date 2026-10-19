@@ -1,0 +1,16 @@
+Options -Indexes
+DirectoryIndex index.php
+RewriteEngine On
+# Private source/configuration must never be served from public_html.
+RewriteRule ^(?:config|server|database|tests|scripts|lib|drizzle|fixtures)(?:/|$) - [F,L,NC]
+RewriteRule (^|/)\. - [F,L]
+RewriteRule ^(?:README|INTEGRACOES|HOSTINGER).* - [F,L,NC]
+RewriteRule ^api(?:/|$) index.php [L,QSA]
+RewriteRule ^catalog\.js$ index.php [L,QSA]
+RewriteRule ^$ index.php [L]
+RewriteRule ^(assets/.*|editorial\.css|editorial\.js|newsletter\.js|checkout\.html|checkout\.js|commerce\.css|privacidade\.html|pagamento\.html|payment\.js|favicon\.svg)$ public/$1 [L]
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Frame-Options "SAMEORIGIN"
+</IfModule>

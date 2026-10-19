@@ -69,4 +69,3 @@ Antes de divulgar, valide no domínio final: inscrição de teste no banco, cota
 - [Mercado Pago](https://www.mercadopago.com.br/developers/pt/reference/online-payments/checkout-pro-preferences/overview)
 - [Melhor Envio](https://docs.melhorenvio.com.br/reference/calculo-de-fretes-por-produtos)
 - [Resend](https://resend.com/docs/api-reference/emails/send-email)
-
